@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Task Planner</title>
+</head>
+<body>
+ 
+<h2>AI Task Planner</h2>
+ 
+<form method="POST">
+    <textarea name="tasks" rows="6" cols="50" placeholder="Enter your tasks..."></textarea><br><br>
+    <button type="submit">Analyze</button>
+</form>
+ 
+{% if result %}
+    <h3>Summary:</h3>
+    <p>{{ result.summary }}</p>
+ 
+    <h3>Category:</h3>
+    <p>{{ result.category }}</p>
+ 
+    <h3>Priority:</h3>
+    <p>{{ result.priority }}</p>
+{% endif %}
+ 
+</body>
+</html>
+ 
